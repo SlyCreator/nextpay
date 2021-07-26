@@ -8,7 +8,7 @@ const config = () => {
       "database": process.env.DB_NAME,
       "host": "127.0.0.1",
       "port": 5432,
-      "dialect": "mysql"
+      "dialect": "postgres"
     },
     "test": {
       "username": "root",
