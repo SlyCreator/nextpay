@@ -1,9 +1,9 @@
 import {Router} from 'express'
-const {authController} = require('../controller');
+const {authController} = require('../../controller/Auth/auth.controller');
 //const { authentication } = require("../middleware")
 export const router = Router();
 
-router.post('/register',authController.signup)
+router.get('/register',authController.signup)
 //router.post('/register',authentication.register, authController.signup)
 // router.post('/activate', authentication.activate, authController.activateAccount)
 // router.post('/login', authentication.login, authController.signin)

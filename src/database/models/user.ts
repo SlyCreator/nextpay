@@ -1,7 +1,7 @@
 'use strict';
 import {Model,DataTypes} from "sequelize";
 
-// import {sequelize} from "./index";
+import {sequelize} from "./index";
 
 interface UserAttributes {
   id:bigint
@@ -11,7 +11,7 @@ interface UserAttributes {
   password:string
 }
 
-module.exports = (sequelize: any, DataTypes: any) => {
+export default  (sequelize: any, DataTypes: any) => {
     class User extends Model<UserAttributes> implements UserAttributes {
 
 
@@ -57,7 +57,9 @@ module.exports = (sequelize: any, DataTypes: any) => {
         }
     }, {
         sequelize,
-        modelName: 'User',
+        tableName: 'Users',
     });
     return User;
 }
+
+
